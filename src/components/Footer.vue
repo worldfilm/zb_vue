@@ -8,7 +8,7 @@
     <div class="footer">
         <router-link to="/AV">
             <span class="iconfont icon-iconshipin"></span>
-            AV520
+            AV
         </router-link>
         <router-link to='/Video'>
             <span class="iconfont icon-shipin"></span>
