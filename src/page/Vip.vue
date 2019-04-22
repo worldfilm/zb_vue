@@ -1,5 +1,6 @@
 <template>
   <div class="vip">
+    vip充值页
   </div>
 </template>
 
