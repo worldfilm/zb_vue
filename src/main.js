@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import router from './router'
 import VueLazyload from 'vue-lazyload'
 import elementUi from 'element-ui'
 import http from './utils/http.js'
@@ -24,5 +25,6 @@ Vue.use(http)
 Vue.use(common)
 Vue.component('null-tips', nullTips)
 new Vue({
+  router,
   render: h => h(App)
 }).$mount('#app')
