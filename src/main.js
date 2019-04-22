@@ -4,7 +4,6 @@ import VueLazyload from 'vue-lazyload'
 import elementUi from 'element-ui'
 import http from './utils/http.js'
 import common from './utils/common.js'
-import userInfo from './utils/userinfo.js'
 import bus from './utils/eventBus.js'
 import nullTips from './components/nullTips.vue'
 import './utils/rem.js'
@@ -23,7 +22,6 @@ Vue.config.productionTip = false
 Vue.use(elementUi)
 Vue.use(http)
 Vue.use(common)
-Vue.use(userInfo)
 Vue.component('null-tips', nullTips)
 new Vue({
   render: h => h(App)
