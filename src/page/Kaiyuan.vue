@@ -1,6 +1,6 @@
 <template>
 
-  <div class="kaiyuan">
+  <div class="kaiyuan" id="kaiyuan">
       <span id="api_token" class="dsn">{{ api_token }}</span>
     <div v-if="loadingg" class="loadingg">
           <img src="/images/loadingg.gif" alt="">
@@ -363,7 +363,7 @@ export default {
                         this.loadingg=false
                         console.log(res)
                         document.getElementById("container").style="display:block"
-                        document.getElementById("app").style=""
+                        document.getElementById("kaiyuan").style=""
                         this.loading=false
                         this.YCmoney=res.data.game_money
                         this.damomoney=res.data.deposit
@@ -525,12 +525,12 @@ export default {
 }
 </script>
 
-  <style lang="scss" scoped>
+  <style scoped>
     *{ margin:0; padding:0; }
     /* color:#757575; */
     li{list-style:none;}
-    html{overflow-y:scroll;font-size:0.4rem;}
-    body{background: #f6f6f6;user-select: none;onselectstart:none}
+    /* html{overflow-y:scroll;font-size:0.4rem;}
+    body{background: #f6f6f6;user-select: none;onselectstart:none} */
     .fl{float:left ;}
     .left{margin-top: 0.2rem}
     .fr{float:right }
@@ -539,7 +539,7 @@ export default {
     .paink{color:#ee84ac; font-weight: 900 ; margin-right: 0.05rem}
     .black{color:#000;height: 2rem;line-height: 2rem;}
     .price{padding: 0rem 0.3rem;}
-    #app{font-size: 0.33rem;background: #fff;}
+    #kaiyuan{font-size: 0.33rem;background: #fff;}
     .gamelist ul li{display: inline-block;width: 20vw; height:25vw; text-align: center;font-size: 0.4rem;  margin: 0 auto; padding: 0.15rem 0.2rem}
     .gamelist ul li img{height: 1.6rem;width: 1.54rem;}
     .alert{display:none;position: fixed;top:2.2rem;left: 14%;width: 7rem;background: #f9f9f9;font-size: 0.35rem;border-radius: 0.5rem;z-index: 11;}
@@ -565,7 +565,7 @@ export default {
       border-bottom-left-radius: 0.4rem;
       border-top: 0.02rem solid #e2e1e1;background: #fefbfb;}
     .el-loading-mask{background-color: rgba(255, 255, 255, 0.1);z-index: 30;}
-    #app .copyAlert{text-align: center;font-size: 0.4rem;z-index: 13;}
+    #kaiyuan .copyAlert{text-align: center;font-size: 0.4rem;z-index: 13;}
     .copyAlert .title{position: relative;top: -1.9rem;height: 3rem;}
     .copyAlert .title span{color: #fff;}
     .copyAlert .btnsure{background: #ee84ac;color: #fff;height: 0.8rem;width: 2.5rem;border-radius: 0.1rem;border: 0.1rem solid #ee84ac;}
