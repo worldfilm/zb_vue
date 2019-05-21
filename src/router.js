@@ -1,25 +1,30 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/page/Home.vue'
-import Vip from '@/page/Vip.vue'
-import Kaiyuan from '@/page/Kaiyuan.vue'
+import Banner from '@/page/Banner/Banner.vue'
+import ShowInfoBar from '@/page/ShowInfoBar/ShowInfoBar.vue'
+
 Vue.use(Router)
 const router = new Router({
   
   mode: 'history',
   linkActiveClass: 'active',
-  routes: [{
-      path: '/Home',
+  routes: [
+    {
+      path: '/',
       name: 'Home',
-      component: Home,
-    },{
-        path: '/',
-        name: 'Vip',
-        component: Vip,
-      },{
-        path: '/Kaiyuan',
-        name: 'Kaiyuan',
-        component: Kaiyuan,
-      },]
+      component: Home
+    },
+    {
+      path: '/',
+      name: 'Banner',
+      component: Banner
+    },
+    {
+      path: '/',
+      name: 'ShowInfoBar',
+      component: ShowInfoBar
+    }
+    ]
 })
 export default router
